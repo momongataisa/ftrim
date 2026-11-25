@@ -1,0 +1,22 @@
+# data and runs are rebuilt by the pipeline (data/ is downloaded from the original sources)
+/data/
+/runs*/
+/configs/host.local.yaml
+
+# Python
+__pycache__/
+*.egg-info/
+.venv
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+
+# tables of the run from scratch: `FTRIM_RESULTS=results/reproduction python -m ftrim report` writes them
+/results/reproduction/RESULTS.md
+/results/reproduction/tables.json

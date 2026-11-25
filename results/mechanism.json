@@ -1,0 +1,484 @@
+{
+ "format_talk": {
+  "qwen/tatqa": {
+   "outputs": 1651,
+   "with_format_talk_pct": 65.47546941247728,
+   "token_share_pct": 10.582514057810492
+  },
+  "qwen/drop": {
+   "outputs": 9426,
+   "with_format_talk_pct": 29.524718862720135,
+   "token_share_pct": 2.9340227113563015
+  },
+  "gemma/tatqa": {
+   "outputs": 1663,
+   "with_format_talk_pct": 52.01443174984967,
+   "token_share_pct": 5.977134438998397
+  },
+  "gemma/drop": {
+   "outputs": 9536,
+   "with_format_talk_pct": 66.56879194630872,
+   "token_share_pct": 7.212789893396803
+  }
+ },
+ "probes": {
+  "s17": {
+   "settings": {
+    "qwen/tatqa": {
+     "outputs": 1081,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -12.606271169523284,
+       "skip_random_logodds": -10.946068072047902
+      },
+      "rationalization": {
+       "format_talk_line_dll": 3.917654232753279,
+       "other_line_dll": 0.9954520977783661,
+       "skip_format_talk": -3.7967838895001376,
+       "skip_random": -4.035230406890906,
+       "skip_format_talk_logodds": -16.403055059023423,
+       "skip_random_logodds": -14.98129847893881
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 2.853320040792089,
+       "other_line_dll": 0.4819182834593307,
+       "skip_format_talk": 6.6113812419967655,
+       "skip_random": 7.315437832119681,
+       "skip_format_talk_logodds": -5.994889927526518,
+       "skip_random_logodds": -3.630630239928222
+      },
+      "stm": {
+       "format_talk_line_dll": 5.955554863319943,
+       "other_line_dll": 1.6006518415186273,
+       "skip_format_talk": -9.489074313950857,
+       "skip_random": -9.992973603685309,
+       "skip_format_talk_logodds": -22.095345483474144,
+       "skip_random_logodds": -20.93904167573321
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.7218602156586673,
+       "other_line_dll": 0.6912881339869237,
+       "skip_format_talk": 10.526000560254094,
+       "skip_random": 0.7214362853206413,
+       "skip_format_talk_logodds": -2.0802706092691903,
+       "skip_random_logodds": -10.224631786727262
+      }
+     }
+    },
+    "qwen/drop": {
+     "outputs": 2000,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -9.369830821218814,
+       "skip_random_logodds": -11.831148141805448
+      },
+      "rationalization": {
+       "format_talk_line_dll": 1.460243554569347,
+       "other_line_dll": 1.0284897708511076,
+       "skip_format_talk": -2.701493185731373,
+       "skip_random": -2.8283295906544725,
+       "skip_format_talk_logodds": -12.071324006950189,
+       "skip_random_logodds": -14.65947773245992
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 1.1605588900895785,
+       "other_line_dll": 0.8539035319890645,
+       "skip_format_talk": 3.816311149148718,
+       "skip_random": 4.890096951465109,
+       "skip_format_talk_logodds": -5.553519672070096,
+       "skip_random_logodds": -6.941051190340338
+      },
+      "stm": {
+       "format_talk_line_dll": 2.2981299210310926,
+       "other_line_dll": 1.5833612374178458,
+       "skip_format_talk": -6.888120498694719,
+       "skip_random": -7.449900442003616,
+       "skip_format_talk_logodds": -16.257951319913534,
+       "skip_random_logodds": -19.281048583809064
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.32088742332245573,
+       "other_line_dll": 0.9159114063315166,
+       "skip_format_talk": 5.820169359669517,
+       "skip_random": 1.344732209261019,
+       "skip_format_talk_logodds": -3.5496614615492983,
+       "skip_random_logodds": -10.486415932544428
+      }
+     }
+    },
+    "gemma/tatqa": {
+     "outputs": 865,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -12.240133021151157,
+       "skip_random_logodds": -13.728341341640649
+      },
+      "rationalization": {
+       "format_talk_line_dll": 2.6318525325797832,
+       "other_line_dll": 0.7801955394166934,
+       "skip_format_talk": -2.790160566693262,
+       "skip_random": -3.9998305389125286,
+       "skip_format_talk_logodds": -15.030293587844419,
+       "skip_random_logodds": -17.728171880553177
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 1.5606400514117917,
+       "other_line_dll": 0.18636425719698146,
+       "skip_format_talk": 7.547284746091465,
+       "skip_random": 9.37896701021278,
+       "skip_format_talk_logodds": -4.692848275059691,
+       "skip_random_logodds": -4.349374331427869
+      },
+      "stm": {
+       "format_talk_line_dll": 5.1266220686735515,
+       "other_line_dll": 1.5074608959325495,
+       "skip_format_talk": -10.232859636755654,
+       "skip_random": -12.921835958474677,
+       "skip_format_talk_logodds": -22.47299265790681,
+       "skip_random_logodds": -26.650177300115324
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.6002786337964443,
+       "other_line_dll": 0.5822495427502073,
+       "skip_format_talk": 11.566398194149274,
+       "skip_random": 2.365403580452751,
+       "skip_format_talk_logodds": -0.6737348270018828,
+       "skip_random_logodds": -11.362937761187897
+      }
+     }
+    },
+    "gemma/drop": {
+     "outputs": 2000,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -9.527681041065156,
+       "skip_random_logodds": -14.416007324915592
+      },
+      "rationalization": {
+       "format_talk_line_dll": 2.069421508499786,
+       "other_line_dll": 0.7901291110114901,
+       "skip_format_talk": -3.0419429229526607,
+       "skip_random": -4.443471635062984,
+       "skip_format_talk_logodds": -12.569623964017817,
+       "skip_random_logodds": -18.859478959978574
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 0.904537629342268,
+       "other_line_dll": 0.10911154344107786,
+       "skip_format_talk": 5.174075797949659,
+       "skip_random": 10.139267189458142,
+       "skip_format_talk_logodds": -4.353605243115497,
+       "skip_random_logodds": -4.276740135457449
+      },
+      "stm": {
+       "format_talk_line_dll": 3.677598720813252,
+       "other_line_dll": 1.33330251092537,
+       "skip_format_talk": -7.541789122349267,
+       "skip_random": -12.713314486416886,
+       "skip_format_talk_logodds": -17.069470163414422,
+       "skip_random_logodds": -27.129321811332478
+      },
+      "ftrim": {
+       "format_talk_line_dll": -3.162792073184775,
+       "other_line_dll": 0.6190099913404616,
+       "skip_format_talk": 8.993836478742924,
+       "skip_random": 2.187885718746329,
+       "skip_format_talk_logodds": -0.5338445623222324,
+       "skip_random_logodds": -12.228121606169262
+      }
+     }
+    }
+   },
+   "pooled": {
+    "outputs": 5946,
+    "methods": {
+     "untrained": {
+      "format_talk_line_dll": 0.0,
+      "other_line_dll": 0.0,
+      "skip_format_talk": 0.0,
+      "skip_random": 0.0,
+      "skip_format_talk_logodds": -10.935979013239603,
+      "skip_random_logodds": -12.730391220102398
+     },
+     "rationalization": {
+      "format_talk_line_dll": 2.519792957100549,
+      "other_line_dll": 0.8985666297644144,
+      "skip_format_talk": -3.0825951412193584,
+      "skip_random": -3.8267155428802226,
+      "skip_format_talk_logodds": -14.018574154458962,
+      "skip_random_logodds": -16.55710676298262
+     },
+     "random_deletion": {
+      "format_talk_line_dll": 1.6197641529089317,
+      "other_line_dll": 0.40782440402161363,
+      "skip_format_talk": 5.787263233796652,
+      "skip_random": 7.930942245813928,
+      "skip_format_talk_logodds": -5.14871577944295,
+      "skip_random_logodds": -4.799448974288469
+     },
+     "stm": {
+      "format_talk_line_dll": 4.26447639345946,
+      "other_line_dll": 1.5061941214485983,
+      "skip_format_talk": -8.537960892937624,
+      "skip_random": -10.769506122645122,
+      "skip_format_talk_logodds": -19.47393990617723,
+      "skip_random_logodds": -23.49989734274752
+     },
+     "ftrim": {
+      "format_talk_line_dll": -1.2014545864905857,
+      "other_line_dll": 0.7021147686022773,
+      "skip_format_talk": 9.226601148203951,
+      "skip_random": 1.6548644484451853,
+      "skip_format_talk_logodds": -1.709377865035651,
+      "skip_random_logodds": -11.075526771657211
+     }
+    }
+   }
+  },
+  "s42": {
+   "settings": {
+    "qwen/tatqa": {
+     "outputs": 1081,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -12.606271169523284,
+       "skip_random_logodds": -10.946068072047902
+      },
+      "rationalization": {
+       "format_talk_line_dll": 3.832947692293273,
+       "other_line_dll": 0.9703554781656216,
+       "skip_format_talk": -3.6859259651956147,
+       "skip_random": -3.7026002581767385,
+       "skip_format_talk_logodds": -16.292197134718897,
+       "skip_random_logodds": -14.648668330224641
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 2.7075049027286724,
+       "other_line_dll": 0.45271126311004156,
+       "skip_format_talk": 6.805455678586375,
+       "skip_random": 7.340367687084222,
+       "skip_format_talk_logodds": -5.800815490936909,
+       "skip_random_logodds": -3.6057003849636806
+      },
+      "stm": {
+       "format_talk_line_dll": 5.979974588768745,
+       "other_line_dll": 1.6014495654460341,
+       "skip_format_talk": -9.39375837298598,
+       "skip_random": -10.214776914757044,
+       "skip_format_talk_logodds": -22.000029542509264,
+       "skip_random_logodds": -21.160844986804946
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.7668607375799678,
+       "other_line_dll": 0.6758110180234216,
+       "skip_format_talk": 10.601041188473232,
+       "skip_random": 0.8122835499778089,
+       "skip_format_talk_logodds": -2.0052299810500522,
+       "skip_random_logodds": -10.133784522070094
+      }
+     }
+    },
+    "qwen/drop": {
+     "outputs": 2000,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -9.369608907743206,
+       "skip_random_logodds": -11.831442161784326
+      },
+      "rationalization": {
+       "format_talk_line_dll": 1.5342827872401226,
+       "other_line_dll": 1.102676646943647,
+       "skip_format_talk": -3.0669262783724873,
+       "skip_random": -3.118554289275993,
+       "skip_format_talk_logodds": -12.436535186115693,
+       "skip_random_logodds": -14.949996451060318
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 1.24618372118664,
+       "other_line_dll": 0.9306420841973408,
+       "skip_format_talk": 3.8313776371211166,
+       "skip_random": 4.726510467493859,
+       "skip_format_talk_logodds": -5.53823127062209,
+       "skip_random_logodds": -7.104931694290467
+      },
+      "stm": {
+       "format_talk_line_dll": 2.251375355495271,
+       "other_line_dll": 1.5758426673268169,
+       "skip_format_talk": -6.274192534570073,
+       "skip_random": -7.301923313676793,
+       "skip_format_talk_logodds": -15.64380144231328,
+       "skip_random_logodds": -19.13336547546112
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.18520250631559065,
+       "other_line_dll": 0.9789392917671784,
+       "skip_format_talk": 5.673230353435222,
+       "skip_random": 1.4266575338213126,
+       "skip_format_talk_logodds": -3.6963785543079855,
+       "skip_random_logodds": -10.404784627963014
+      }
+     }
+    },
+    "gemma/tatqa": {
+     "outputs": 865,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -12.237076408827267,
+       "skip_random_logodds": -13.727905695350808
+      },
+      "rationalization": {
+       "format_talk_line_dll": 2.6742324061987963,
+       "other_line_dll": 0.8070840952816496,
+       "skip_format_talk": -3.0615017183485653,
+       "skip_random": -4.21949559378038,
+       "skip_format_talk_logodds": -15.298578127175833,
+       "skip_random_logodds": -17.94740128913119
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 1.4817783914075155,
+       "other_line_dll": 0.18383276772255502,
+       "skip_format_talk": 7.690528223229345,
+       "skip_random": 9.365366654610261,
+       "skip_format_talk_logodds": -4.546548185597922,
+       "skip_random_logodds": -4.362539040740549
+      },
+      "stm": {
+       "format_talk_line_dll": 5.029618041424982,
+       "other_line_dll": 1.490946828111221,
+       "skip_format_talk": -9.83250988987142,
+       "skip_random": -12.57327066666808,
+       "skip_format_talk_logodds": -22.069586298698688,
+       "skip_random_logodds": -26.301176362018886
+      },
+      "ftrim": {
+       "format_talk_line_dll": -0.7269487546020613,
+       "other_line_dll": 0.6140762227662605,
+       "skip_format_talk": 11.607184692473309,
+       "skip_random": 2.206773007838496,
+       "skip_format_talk_logodds": -0.6298917163539576,
+       "skip_random_logodds": -11.521132687512312
+      }
+     }
+    },
+    "gemma/drop": {
+     "outputs": 2000,
+     "methods": {
+      "untrained": {
+       "format_talk_line_dll": 0.0,
+       "other_line_dll": 0.0,
+       "skip_format_talk": 0.0,
+       "skip_random": 0.0,
+       "skip_format_talk_logodds": -9.527327831622097,
+       "skip_random_logodds": -14.416169211972703
+      },
+      "rationalization": {
+       "format_talk_line_dll": 2.063976952589206,
+       "other_line_dll": 0.7831081589633141,
+       "skip_format_talk": -3.0306246912731356,
+       "skip_random": -4.375015706561894,
+       "skip_format_talk_logodds": -12.557952522895233,
+       "skip_random_logodds": -18.791184918534597
+      },
+      "random_deletion": {
+       "format_talk_line_dll": 0.851738020384395,
+       "other_line_dll": 0.12211745384234046,
+       "skip_format_talk": 4.662606898422375,
+       "skip_random": 10.182786628754563,
+       "skip_format_talk_logodds": -4.864720933199722,
+       "skip_random_logodds": -4.2333825832181375
+      },
+      "stm": {
+       "format_talk_line_dll": 3.6601798920408806,
+       "other_line_dll": 1.3239966900111868,
+       "skip_format_talk": -7.495121969039581,
+       "skip_random": -12.007174750807897,
+       "skip_format_talk_logodds": -17.02244980066168,
+       "skip_random_logodds": -26.423343962780596
+      },
+      "ftrim": {
+       "format_talk_line_dll": -3.150931982245219,
+       "other_line_dll": 0.5897851149182409,
+       "skip_format_talk": 8.83366242824978,
+       "skip_random": 2.2942533042159616,
+       "skip_format_talk_logodds": -0.6936654033723153,
+       "skip_random_logodds": -12.12191590775674
+      }
+     }
+    }
+   },
+   "pooled": {
+    "outputs": 5946,
+    "methods": {
+     "untrained": {
+      "format_talk_line_dll": 0.0,
+      "other_line_dll": 0.0,
+      "skip_format_talk": 0.0,
+      "skip_random": 0.0,
+      "skip_format_talk_logodds": -10.935071079428964,
+      "skip_random_logodds": -12.730396285288935
+     },
+     "rationalization": {
+      "format_talk_line_dll": 2.526359959580349,
+      "other_line_dll": 0.915806094838558,
+      "skip_format_talk": -3.2112446632974505,
+      "skip_random": -3.853916461948751,
+      "skip_format_talk_logodds": -14.146315742726415,
+      "skip_random_logodds": -16.584312747237686
+     },
+     "random_deletion": {
+      "format_talk_line_dll": 1.5718012589268058,
+      "other_line_dll": 0.4223258922180695,
+      "skip_format_talk": 5.747492109339802,
+      "skip_random": 7.903757859485726,
+      "skip_format_talk_logodds": -5.187578970089161,
+      "skip_random_logodds": -4.826638425803209
+     },
+     "stm": {
+      "format_talk_line_dll": 4.23028696943247,
+      "other_line_dll": 1.498058937723815,
+      "skip_format_talk": -8.248895691616763,
+      "skip_random": -10.524286411477453,
+      "skip_format_talk_logodds": -19.18396677104573,
+      "skip_random_logodds": -23.254682696766388
+     },
+     "ftrim": {
+      "format_talk_line_dll": -1.2074859951857095,
+      "other_line_dll": 0.7146529118687754,
+      "skip_format_talk": 9.178779665657887,
+      "skip_random": 1.6849918489633948,
+      "skip_format_talk_logodds": -1.7562914137710774,
+      "skip_random_logodds": -11.04540443632554
+     }
+    }
+   }
+  }
+ }
+}

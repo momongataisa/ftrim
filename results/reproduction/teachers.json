@@ -1,0 +1,387 @@
+{
+ "settings": {
+  "qwen/drop": {
+   "questions": 10006,
+   "solved_by_sampling": 8150,
+   "unsolved": 1856,
+   "recovered_by_rationalization": 886,
+   "pools": {
+    "rejection": 8148,
+    "rationalization": 9034,
+    "normalized": 9034,
+    "sft": 10006
+   },
+   "answer_lines_normalized": 369,
+   "reasoning_tokens": 2921224,
+   "all_reasoning_lines": {
+    "lines": 113534,
+    "format_words_pct": 2.5772015431500694
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 9034,
+     "edited": 2011,
+     "tokens": 60959,
+     "share_of_reasoning": 0.020868,
+     "share_before_check": 0.020868,
+     "kept_by_check": 0,
+     "no_reasoning": 34,
+     "deleted_lines": 2582,
+     "format_words_pct": 54.80247869868319,
+     "top_lines": [
+      [
+       "the question asks for a number in digits only.",
+       7.260069617105917
+      ],
+      [
+       "format the answer:",
+       6.364992541024366
+      ],
+      [
+       "the result is N.",
+       5.320735952262556
+      ],
+      [
+       "N",
+       3.7294878170064645
+      ],
+      [
+       "format the answer: the question asks for a number in digits only.",
+       2.834410740924913
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 9034,
+     "edited": 3610,
+     "tokens": 119212,
+     "share_of_reasoning": 0.040809,
+     "share_before_check": 0.040809,
+     "kept_by_check": 0,
+     "no_reasoning": 116,
+     "deleted_lines": 5318,
+     "format_words_pct": 30.763444904099284,
+     "top_lines": [
+      [
+       "format the answer:",
+       4.321329639889196
+      ],
+      [
+       "the question asks for a number in digits only.",
+       4.044321329639889
+      ],
+      [
+       "the result is N.",
+       3.628808864265928
+      ],
+      [
+       "N",
+       2.6592797783933517
+      ],
+      [
+       "the value to use is N.",
+       2.3545706371191137
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 9034,
+     "edited": 1085,
+     "tokens": 26131,
+     "share_of_reasoning": 0.008945,
+     "share_before_check": 0.008945,
+     "kept_by_check": 0,
+     "no_reasoning": 25,
+     "deleted_lines": 1205,
+     "format_words_pct": 78.58921161825727,
+     "top_lines": [
+      [
+       "the question asks for a number in digits only.",
+       13.456221198156681
+      ],
+      [
+       "N",
+       5.529953917050691
+      ],
+      [
+       "format the answer: the question asks for a number in digits only.",
+       5.253456221198157
+      ],
+      [
+       "the result is N.",
+       3.870967741935484
+      ],
+      [
+       "format the answer:",
+       3.0414746543778803
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 9034,
+     "edited": 9020,
+     "tokens": 2396526,
+     "share_of_reasoning": 0.820384,
+     "share_before_check": 0.820384,
+     "kept_by_check": 0,
+     "no_reasoning": 2785,
+     "deleted_lines": 88909,
+     "format_words_pct": 3.116669853445658,
+     "top_lines": [
+      [
+       "calculate the difference:",
+       5.288248337028825
+      ],
+      [
+       "$N - N = N$",
+       4.4567627494456765
+      ],
+      [
+       "calculation: N - N = N.",
+       2.1951219512195124
+      ],
+      [
+       "calculation:",
+       2.12860310421286
+      ],
+      [
+       "N",
+       2.12860310421286
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 9034,
+     "edited": 1763,
+     "tokens": 66181,
+     "share_of_reasoning": 0.022655,
+     "share_before_check": 0.022655,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 3275,
+     "format_words_pct": 3.114503816793893,
+     "top_lines": [
+      [
+       "N",
+       1.5882019285309132
+      ],
+      [
+       "calculation:",
+       1.3045944412932502
+      ],
+      [
+       "calculate the difference:",
+       0.9642654566080544
+      ],
+      [
+       "result: N",
+       0.9075439591605219
+      ],
+      [
+       "$N - N = N$",
+       0.737379466817924
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 9034,
+     "edited": 8932,
+     "tokens": 179418,
+     "share_of_reasoning": 0.061419
+    }
+   }
+  },
+  "gemma/tatqa": {
+   "questions": 13215,
+   "solved_by_sampling": 9052,
+   "unsolved": 4163,
+   "recovered_by_rationalization": 2662,
+   "pools": {
+    "rejection": 9052,
+    "rationalization": 11714,
+    "normalized": 11714,
+    "sft": 13211
+   },
+   "answer_lines_normalized": 7368,
+   "reasoning_tokens": 3484051,
+   "all_reasoning_lines": {
+    "lines": 138281,
+    "format_words_pct": 10.404177001901925
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 11714,
+     "edited": 6546,
+     "tokens": 247299,
+     "share_of_reasoning": 0.07098,
+     "share_before_check": 0.070981,
+     "kept_by_check": 1,
+     "no_reasoning": 0,
+     "deleted_lines": 9479,
+     "format_words_pct": 79.0695221014875,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       9.318667888787045
+      ],
+      [
+       "round the result to two decimal places.",
+       5.789795294836542
+      ],
+      [
+       "format the answer:",
+       3.9260617170791323
+      ],
+      [
+       "round the result to two decimal places:",
+       2.3678582340360523
+      ],
+      [
+       "format the answer according to the instructions.",
+       2.322028719828903
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 11714,
+     "edited": 8756,
+     "tokens": 431730,
+     "share_of_reasoning": 0.123916,
+     "share_before_check": 0.123917,
+     "kept_by_check": 1,
+     "no_reasoning": 0,
+     "deleted_lines": 17246,
+     "format_words_pct": 59.2485213962658,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       7.035175879396985
+      ],
+      [
+       "format the answer:",
+       4.876656007309274
+      ],
+      [
+       "round the result to two decimal places.",
+       4.454088624942896
+      ],
+      [
+       "from the table:",
+       3.9858382823206946
+      ],
+      [
+       "value: N",
+       2.067153951576062
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 11714,
+     "edited": 3266,
+     "tokens": 88284,
+     "share_of_reasoning": 0.025339,
+     "share_before_check": 0.025339,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 3680,
+     "format_words_pct": 92.22826086956522,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       7.777097366809553
+      ],
+      [
+       "round the result to two decimal places.",
+       4.011022657685242
+      ],
+      [
+       "unit: thousand",
+       2.510716472749541
+      ],
+      [
+       "format the answer:",
+       2.204531537048377
+      ],
+      [
+       "format the answer according to the instructions.",
+       1.3472137170851195
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 11714,
+     "edited": 11712,
+     "tokens": 2728242,
+     "share_of_reasoning": 0.783066,
+     "share_before_check": 0.783142,
+     "kept_by_check": 1,
+     "no_reasoning": 1716,
+     "deleted_lines": 104535,
+     "format_words_pct": 13.250107619457598,
+     "top_lines": [
+      [
+       "from the table:",
+       11.31318306010929
+      ],
+      [
+       "round to two decimal places:",
+       5.259562841530054
+      ],
+      [
+       "calculate the percentage change:",
+       4.841188524590164
+      ],
+      [
+       "$$\\text{percentage change} = \\left( \\frac{N - N}{N} \\right) \\times N$$",
+       4.567964480874317
+      ],
+      [
+       "format the answer:",
+       4.106898907103825
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 11714,
+     "edited": 6467,
+     "tokens": 270753,
+     "share_of_reasoning": 0.077712,
+     "share_before_check": 0.077712,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 13585,
+     "format_words_pct": 5.542878174457122,
+     "top_lines": [
+      [
+       "from the table:",
+       5.412092160197928
+      ],
+      [
+       "calculate the change:",
+       1.855574454925004
+      ],
+      [
+       "the formula for percentage change is:",
+       1.731869491263337
+      ],
+      [
+       "calculate the percentage change:",
+       1.6236276480593783
+      ],
+      [
+       "extract the values:",
+       1.6236276480593783
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 11714,
+     "edited": 11657,
+     "tokens": 190740,
+     "share_of_reasoning": 0.054747
+    }
+   }
+  }
+ },
+ "simple_formats": {}
+}

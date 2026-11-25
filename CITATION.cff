@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper."
+title: "FTrim: format-talk trimming for self-training under strict answer formats"
+type: software
+license:              # the code is MIT; the vendored DROP evaluator is Apache-2.0
+  - MIT
+  - Apache-2.0
+authors:
+  - name: "The FTrim authors"
+preferred-citation:
+  type: article
+  title: "Trimming Answer-Format Discussion from LLM Self-Training Data with Counterfactual Prompts"
+  authors:
+    - family-names: Ito
+      given-names: Tatsuto
+    - family-names: Ozaki
+      given-names: Ryota
+    - family-names: Imajo
+      given-names: Kentaro
+    - family-names: Hirano
+      given-names: Masanori
+    - family-names: Sakaji
+      given-names: Hiroki
+    - family-names: Noda
+      given-names: Itsuki
+  year: 2026
+  status: submitted

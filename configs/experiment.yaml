@@ -1,0 +1,102 @@
+# Every setting of the experiments in the paper. A *setting* is one model fine-tuned on one target task.
+
+models:
+  qwen:
+    name: Qwen3.5-4B
+    hf_id: Qwen/Qwen3.5-4B
+    revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    loader: AutoModelForImageTextToText
+    pad_token_id: 248044
+    assistant_terminator: [248046, 198]      # <|im_end|> \n closes every assistant turn of the chat template
+    stop_token_ids: [248046]
+    thinking_sampling: {temperature: 1.0, top_p: 0.95, top_k: 20, min_p: 0.0, presence_penalty: 1.5}
+  gemma:
+    name: Gemma-4-E4B-it
+    hf_id: google/gemma-4-E4B-it
+    revision: ee0ef6023621cff504d758262d4e04895a5af4a2
+    loader: AutoModelForImageTextToText
+    pad_token_id: 0
+    assistant_terminator: [106, 107]
+    stop_token_ids: [1, 106, 50]
+    thinking_sampling: {temperature: 1.0, top_p: 0.95, top_k: 64}
+
+datasets: [tatqa, drop]                                       # target tasks: strict answer formats
+unseen: [finance_reasoning, gsm8k, ifeval, arc_challenge]     # evaluation only, never used for training or selection
+seeds: [17, 42, 89]
+
+# Steps 1 and 2 of Fig. 1: the untrained model samples K solutions per training question; for a question without a
+# usable one it samples K more with the gold answer as a hint (rationalization).
+sampling:
+  k: 4
+  temperature: 0.7
+  top_p: 0.9
+  max_new_tokens: 8192
+  max_pair_tokens: 8192                     # prompt + solution in the chat format; longer pairs are excluded, never cut
+
+# The edits. FTrim edits the normalized teachers: it deletes a reasoning line when its score m (the log-likelihood
+# ratio per token between the prompt with the format instructions and the counterfactual prompt) reaches the threshold;
+# `strict` deletes only above it. Random deletion removes about as many tokens in other, random lines of the teachers
+# that `like` edits. STM leaves the reasoning tokens with perplexity above tau out of the loss.
+# Random deletion and STM keep the answer lines of the rationalization teachers, without the answer normalization.
+edits:
+  ftrim: {threshold_bits: 1.0}
+  ftrim_half_bit: {threshold_bits: 0.5}
+  ftrim_two_bits: {threshold_bits: 2.0}
+  ftrim_zero: {threshold_bits: 0.0, strict: true}
+  random_deletion: {like: ftrim, stream: RDKb}      # stream: the name of the random stream of the paper's runs
+  stm: {tau: 2.5}
+
+# The fine-tuned methods and their seeds. `main` are the rows of Table 1; `ablation` are Normalization only (the pool
+# that FTrim starts from) and the other thresholds of Sect. 3 (one run each).
+methods:
+  main:
+    sft: [17, 42, 89]                       # the gold answer line only, no reasoning
+    rejection: [17, 42, 89]                 # the first usable sampled solution per question
+    rationalization: [17, 42, 89]           # + the first usable solution written with the hint
+    random_deletion: [17, 42, 89]
+    stm: [17, 42, 89]
+    ftrim: [17, 42, 89]
+  ablation:
+    normalized: [17, 42, 89]
+    ftrim_half_bit: [17]
+    ftrim_two_bits: [17]
+    ftrim_zero: [17]
+
+training:
+  # LoRA on the text decoder's modules with these names. Qwen3.5-4B: the MLP of all 32 layers, and the attention of
+  # its 8 full-attention layers (3, 7, ..., 31); its 24 linear-attention layers have other projection names and are
+  # not adapted. Gemma-4-E4B-it: attention and MLP of all 42 layers (k_proj and v_proj exist in 24 of them).
+  lora: {r: 16, alpha: 32, dropout: 0.0, targets: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]}
+  lr: 2.0e-5
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+  weight_decay: 0.0
+  batch: 32
+  horizon_factor: 3                         # linear decay to zero over 3 epochs; only the first epoch is trained
+  grad_clip: 1.0
+  micro_batch_tokens: 8192                  # memory only: the loss is computed per sequence
+
+evaluation:
+  max_model_len: 32768
+  max_new_tokens: {tatqa: 16384, drop: 16384, finance_reasoning: 16384, gsm8k: 4096, ifeval: 4096, arc_challenge: 4096}
+  thinking_max_new_tokens: 16384
+
+engines:                                    # vLLM settings (throughput only)
+  generate: {gpu_memory_utilization: 0.88, max_num_seqs: 256, max_num_batched_tokens: 32768}
+  score: {gpu_memory_utilization: 0.6, max_num_seqs: 8, max_num_batched_tokens: 4096}
+
+statistics:
+  resamples: 20000
+  seed: 271828
+
+# Sect. 5, "What the models learn": the fine-tuned models score the test outputs of the untrained model that
+# contain format talk, as written, without the format-talk lines and without random other lines.
+mechanism:
+  methods: [rationalization, random_deletion, stm, ftrim]
+  seeds: [17, 42]
+  max_outputs: {tatqa: 100000, drop: 2000}  # every TAT-QA output, a seeded sample of the DROP outputs
+
+# Sect. 5, "Where FTrim helps less": answers with a single number or option. Teachers and FTrim's scoring only.
+simple_formats:
+  qwen: [math, gsm8k_strict, medcalc, medqa]
+  gemma: [medcalc]

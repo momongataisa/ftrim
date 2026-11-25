@@ -1,0 +1,72 @@
+[project]
+name = "ftrim"
+version = "1.0.0"
+description = "FTrim: trimming answer-format discussion from LLM self-training data with counterfactual prompts"
+readme = "README.md"
+license = "MIT AND Apache-2.0"       # Apache-2.0: the vendored DROP evaluator (src/ftrim/vendor/NOTICE.md)
+license-files = ["LICENSE", "src/ftrim/vendor/LICENSE.*"]
+requires-python = ">=3.12,<3.13"
+keywords = ["self-training", "answer format", "counterfactual prompt", "format talk", "LoRA"]
+classifiers = [
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# The base install is enough for the method itself (ftrim.core), the data, the scorers, the statistics and the tables
+# (`ftrim report` rebuilds the tables of the paper from results/ on a CPU).
+dependencies = [
+  "numpy==2.3.5",
+  "scipy==1.18.1",
+  "pandas==3.1.0",
+  "pyarrow==26.0.0",
+  "PyYAML==6.0.3",
+  "huggingface_hub==1.33.0",
+]
+
+[project.optional-dependencies]
+# Generation, scoring, fine-tuning and evaluation (one GPU per job). Every version here is that of the paper's runs.
+gpu = [
+  "vllm==0.23.0",
+  "torch==2.11.0",
+  "transformers==5.12.1",
+  "peft==0.18.1",
+  "accelerate==1.14.0",
+  "flash-linear-attention==0.6.0",
+  "safetensors==0.8.0",
+]
+# IFEval is scored with the lm-evaluation-harness port of the official checker.
+ifeval = ["lm_eval==0.4.12", "langdetect==1.0.9", "nltk==3.10.4", "immutabledict==4.3.1"]
+figures = ["matplotlib==3.11.2"]
+
+[project.scripts]
+ftrim = "ftrim.cli:main"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "ruff==0.17.4"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ftrim = ["vendor/LICENSE.*", "vendor/NOTICE.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["src/ftrim/vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E731", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# pinned URLs and checksums; prompt text that must stay byte-identical
+"src/ftrim/data.py" = ["E501"]
+"src/ftrim/prompts.py" = ["E501"]
+"src/ftrim/paper.py" = ["E501"]             # a table of the numbers printed in the paper

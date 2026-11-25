@@ -1,0 +1,112 @@
+{
+ "tatqa/train": {
+  "questions": 13215,
+  "documents": 2201,
+  "sha256": "272d98e74eedd26eba4f751f4724a258f1da90d3b2f980965c36ad7b62649cd8"
+ },
+ "tatqa/dev": {
+  "questions": 1668,
+  "documents": 278,
+  "sha256": "ef8abb67ad841b47c4310edc112554635c31142bbdb850a42c2dc173c6d4fa72"
+ },
+ "tatqa/test": {
+  "questions": 1663,
+  "documents": 277,
+  "sha256": "aa3ff2185e8804a231508cccaf14f118b1ed22214b75564741a911314132b4e9"
+ },
+ "drop/train": {
+  "questions": 10006,
+  "documents": 722,
+  "sha256": "3a31782c64b4d4ea5a5c87c07d98aa3463202d6336b10e5a84c07093938318da"
+ },
+ "drop/dev": {
+  "questions": 1017,
+  "documents": 74,
+  "sha256": "68c5dba1ad90e4a8656939ca709cc14b979979d1a7efaf7363a4e8bae8116c95"
+ },
+ "drop/test": {
+  "questions": 9536,
+  "documents": 582,
+  "sha256": "49aee921462256f86934f361ee2badc7b83b50d067a616f62985c7055039d441"
+ },
+ "finance_reasoning/test": {
+  "questions": 2238,
+  "documents": 2238,
+  "sha256": "89f44c81b1eef61bc1c250c9578d01bb7465a77ea700ee61b04bb6edb6b0a511"
+ },
+ "gsm8k/test": {
+  "questions": 1319,
+  "documents": 1319,
+  "sha256": "046a103ada23a7b16bb876a6ffdef37928979ed266b4244353b53d616b315e3b"
+ },
+ "arc_challenge/test": {
+  "questions": 1172,
+  "documents": 1172,
+  "sha256": "29cc4a38b2a6a5e7fa7d7ee1831ed090dc7af243a41ee175f2644f20f1e598d1"
+ },
+ "ifeval/test": {
+  "questions": 541,
+  "documents": 541,
+  "sha256": "fb3379d7b1b96b5b81bfa06376a7bac17040fa57423b60136c27416d51c044e6"
+ },
+ "math/train": {
+  "questions": 6998,
+  "documents": 6998,
+  "sha256": "9ee9fde73a6d383f9ee5ee1260256dd5670b1b1517d35618acef83687ee02dbd"
+ },
+ "math/dev": {
+  "questions": 500,
+  "documents": 500,
+  "sha256": "3f3526f59bad048671973a9451a4a353920e147976d9058f3ba13f6cdbbffb46"
+ },
+ "math/test": {
+  "questions": 5000,
+  "documents": 5000,
+  "sha256": "1f56c63d5b31a9895a91f53fa4f7821c458c285bbf07d120a74224dff989a80e"
+ },
+ "gsm8k_strict/train": {
+  "questions": 6973,
+  "documents": 6973,
+  "sha256": "e73fe25a53b636c8c558b4fa0ea74bd9694d0ad68f998d28163c09fda1e15efb"
+ },
+ "gsm8k_strict/dev": {
+  "questions": 500,
+  "documents": 500,
+  "sha256": "c838d9a8839cac0d793cabf65e92956f8a9be8c3ffc680be15e3626ac82febbd"
+ },
+ "gsm8k_strict/test": {
+  "questions": 1319,
+  "documents": 1319,
+  "sha256": "f0de81b4a26bface8a591d82e41616a97cab5edfa9e1cc0201d0302a11bd5c4d"
+ },
+ "medcalc/train": {
+  "questions": 9988,
+  "documents": 8527,
+  "sha256": "436a48bc4ff0a84ee38938fce70b3b148d1e6717aedc6d92d9c12d4929884c1e"
+ },
+ "medcalc/dev": {
+  "questions": 550,
+  "documents": 456,
+  "sha256": "2857f7e93a5e45f783f02d165b80c70083e05536e2c773f6ac00035e050f607f"
+ },
+ "medcalc/test": {
+  "questions": 1100,
+  "documents": 1074,
+  "sha256": "0061137690a9f54720073be3bc8a187c371cf3f62154a0b00365b95c219e37ca"
+ },
+ "medqa/train": {
+  "questions": 10178,
+  "documents": 10178,
+  "sha256": "01fe530ecadbe2aaf5bdee61f80863455f6bd7b2dea2b02d2b8ce95dad55587f"
+ },
+ "medqa/dev": {
+  "questions": 1272,
+  "documents": 1272,
+  "sha256": "057cbb9bf74365266dd77b35680d1a2d11336fa458590b733f3de34ae5d8249e"
+ },
+ "medqa/test": {
+  "questions": 1273,
+  "documents": 1273,
+  "sha256": "e4da4e902aaf4dfe1655381ca0bff3049ebcceffbf16007d31da69d3b663569a"
+ }
+}

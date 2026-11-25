@@ -1,0 +1,800 @@
+{
+ "settings": {
+  "qwen/tatqa": {
+   "questions": 13215,
+   "solved_by_sampling": 10075,
+   "unsolved": 3140,
+   "recovered_by_rationalization": 1907,
+   "pools": {
+    "rejection": 10075,
+    "rationalization": 11982,
+    "normalized": 11982,
+    "sft": 13211
+   },
+   "answer_lines_normalized": 6976,
+   "reasoning_tokens": 4817778,
+   "all_reasoning_lines": {
+    "lines": 167533,
+    "format_words_pct": 19.416473172449606
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 11982,
+     "edited": 7241,
+     "tokens": 628591,
+     "share_of_reasoning": 0.130473,
+     "share_before_check": 0.130473,
+     "kept_by_check": 0,
+     "no_reasoning": 2,
+     "deleted_lines": 11960,
+     "format_words_pct": 90.36789297658864,
+     "top_lines": [
+      [
+       "round to two decimals:",
+       9.087142659853612
+      ],
+      [
+       "format the answer:",
+       1.5329374395801685
+      ],
+      [
+       "determine the unit:",
+       1.160060765087695
+      ],
+      [
+       "let's look at the example: \"N% is value N with unit percent\".",
+       0.8148045850020715
+      ],
+      [
+       "round to two decimal places.",
+       0.7871840905952217
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 11982,
+     "edited": 9270,
+     "tokens": 885814,
+     "share_of_reasoning": 0.183864,
+     "share_before_check": 0.183864,
+     "kept_by_check": 0,
+     "no_reasoning": 4,
+     "deleted_lines": 19182,
+     "format_words_pct": 77.76040037535189,
+     "top_lines": [
+      [
+       "round to two decimals:",
+       7.108953613807983
+      ],
+      [
+       "format the answer:",
+       2.7831715210355985
+      ],
+      [
+       "determine the unit:",
+       2.2977346278317152
+      ],
+      [
+       "value: N",
+       1.8985976267529665
+      ],
+      [
+       "round to two decimal places:",
+       1.7691477885652642
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 11982,
+     "edited": 3608,
+     "tokens": 172400,
+     "share_of_reasoning": 0.035784,
+     "share_before_check": 0.035784,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 4834,
+     "format_words_pct": 94.33181630119984,
+     "top_lines": [
+      [
+       "round to two decimals:",
+       17.79379157427938
+      ],
+      [
+       "let's look at the example: \"N% is value N with unit percent\".",
+       1.6352549889135255
+      ],
+      [
+       "round to two decimals.",
+       1.4135254988913526
+      ],
+      [
+       "the allowed units include \"thousand\".",
+       0.9700665188470067
+      ],
+      [
+       "the allowed unit for this scale is \"thousand\".",
+       0.9423503325942351
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 11982,
+     "edited": 11971,
+     "tokens": 3925922,
+     "share_of_reasoning": 0.814882,
+     "share_before_check": 0.815193,
+     "kept_by_check": 1,
+     "no_reasoning": 2094,
+     "deleted_lines": 128239,
+     "format_words_pct": 23.735369115479692,
+     "top_lines": [
+      [
+       "value: N",
+       10.600618160554674
+      ],
+      [
+       "unit: thousand",
+       6.55751399214769
+      ],
+      [
+       "change = value in N - value in N",
+       5.722161891237157
+      ],
+      [
+       "round to two decimals:",
+       5.521677387018628
+      ],
+      [
+       "extract the values:",
+       5.237657672709047
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 11982,
+     "edited": 7188,
+     "tokens": 644769,
+     "share_of_reasoning": 0.133831,
+     "share_before_check": 0.133849,
+     "kept_by_check": 1,
+     "no_reasoning": 0,
+     "deleted_lines": 27650,
+     "format_words_pct": 19.858951175406872,
+     "top_lines": [
+      [
+       "value: N",
+       9.44629938786867
+      ],
+      [
+       "unit: thousand",
+       5.801335559265443
+      ],
+      [
+       "unit: million",
+       3.7006121313299944
+      ],
+      [
+       "extract the values:",
+       3.3667223149693934
+      ],
+      [
+       "calculate the average:",
+       2.3650528658875904
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 11982,
+     "edited": 11962,
+     "tokens": 298594,
+     "share_of_reasoning": 0.061978
+    }
+   }
+  },
+  "qwen/drop": {
+   "questions": 10006,
+   "solved_by_sampling": 8150,
+   "unsolved": 1856,
+   "recovered_by_rationalization": 886,
+   "pools": {
+    "rejection": 8148,
+    "rationalization": 9034,
+    "normalized": 9034,
+    "sft": 10006
+   },
+   "answer_lines_normalized": 369,
+   "reasoning_tokens": 2921224,
+   "all_reasoning_lines": {
+    "lines": 113534,
+    "format_words_pct": 2.5772015431500694
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 9034,
+     "edited": 2011,
+     "tokens": 60971,
+     "share_of_reasoning": 0.020872,
+     "share_before_check": 0.020872,
+     "kept_by_check": 0,
+     "no_reasoning": 34,
+     "deleted_lines": 2583,
+     "format_words_pct": 54.78126209833527,
+     "top_lines": [
+      [
+       "the question asks for a number in digits only.",
+       7.260069617105917
+      ],
+      [
+       "format the answer:",
+       6.364992541024366
+      ],
+      [
+       "the result is N.",
+       5.320735952262556
+      ],
+      [
+       "N",
+       3.7294878170064645
+      ],
+      [
+       "format the answer: the question asks for a number in digits only.",
+       2.834410740924913
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 9034,
+     "edited": 3611,
+     "tokens": 119347,
+     "share_of_reasoning": 0.040855,
+     "share_before_check": 0.040855,
+     "kept_by_check": 0,
+     "no_reasoning": 116,
+     "deleted_lines": 5323,
+     "format_words_pct": 30.73454818711253,
+     "top_lines": [
+      [
+       "format the answer:",
+       4.3201329271669895
+      ],
+      [
+       "the question asks for a number in digits only.",
+       4.04320132927167
+      ],
+      [
+       "the result is N.",
+       3.62780393242869
+      ],
+      [
+       "N",
+       2.6585433397950706
+      ],
+      [
+       "the value to use is N.",
+       2.353918582110219
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 9034,
+     "edited": 1085,
+     "tokens": 26131,
+     "share_of_reasoning": 0.008945,
+     "share_before_check": 0.008945,
+     "kept_by_check": 0,
+     "no_reasoning": 25,
+     "deleted_lines": 1205,
+     "format_words_pct": 78.58921161825727,
+     "top_lines": [
+      [
+       "the question asks for a number in digits only.",
+       13.456221198156681
+      ],
+      [
+       "N",
+       5.529953917050691
+      ],
+      [
+       "format the answer: the question asks for a number in digits only.",
+       5.253456221198157
+      ],
+      [
+       "the result is N.",
+       3.870967741935484
+      ],
+      [
+       "format the answer:",
+       3.0414746543778803
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 9034,
+     "edited": 9020,
+     "tokens": 2396099,
+     "share_of_reasoning": 0.820238,
+     "share_before_check": 0.820238,
+     "kept_by_check": 0,
+     "no_reasoning": 2784,
+     "deleted_lines": 88900,
+     "format_words_pct": 3.1181102362204722,
+     "top_lines": [
+      [
+       "calculate the difference:",
+       5.277161862527716
+      ],
+      [
+       "$N - N = N$",
+       4.4567627494456765
+      ],
+      [
+       "calculation: N - N = N.",
+       2.1951219512195124
+      ],
+      [
+       "N",
+       2.12860310421286
+      ],
+      [
+       "calculation:",
+       2.117516629711752
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 9034,
+     "edited": 1763,
+     "tokens": 66190,
+     "share_of_reasoning": 0.022658,
+     "share_before_check": 0.022658,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 3275,
+     "format_words_pct": 3.114503816793893,
+     "top_lines": [
+      [
+       "N",
+       1.5882019285309132
+      ],
+      [
+       "calculation:",
+       1.3045944412932502
+      ],
+      [
+       "calculate the difference:",
+       0.9642654566080544
+      ],
+      [
+       "result: N",
+       0.9075439591605219
+      ],
+      [
+       "$N - N = N$",
+       0.737379466817924
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 9034,
+     "edited": 8931,
+     "tokens": 179398,
+     "share_of_reasoning": 0.061412
+    }
+   }
+  },
+  "gemma/tatqa": {
+   "questions": 13215,
+   "solved_by_sampling": 9052,
+   "unsolved": 4163,
+   "recovered_by_rationalization": 2662,
+   "pools": {
+    "rejection": 9052,
+    "rationalization": 11714,
+    "normalized": 11714,
+    "sft": 13211
+   },
+   "answer_lines_normalized": 7368,
+   "reasoning_tokens": 3484051,
+   "all_reasoning_lines": {
+    "lines": 138281,
+    "format_words_pct": 10.404177001901925
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 11714,
+     "edited": 6545,
+     "tokens": 247276,
+     "share_of_reasoning": 0.070974,
+     "share_before_check": 0.070974,
+     "kept_by_check": 1,
+     "no_reasoning": 0,
+     "deleted_lines": 9478,
+     "format_words_pct": 79.07786452838151,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       9.320091673032849
+      ],
+      [
+       "round the result to two decimal places.",
+       5.790679908326967
+      ],
+      [
+       "format the answer:",
+       3.926661573720397
+      ],
+      [
+       "round the result to two decimal places:",
+       2.3682200152788386
+      ],
+      [
+       "format the answer according to the instructions.",
+       2.3223834988540872
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 11714,
+     "edited": 8757,
+     "tokens": 431791,
+     "share_of_reasoning": 0.123934,
+     "share_before_check": 0.123934,
+     "kept_by_check": 1,
+     "no_reasoning": 0,
+     "deleted_lines": 17251,
+     "format_words_pct": 59.23134890730972,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       7.034372501998401
+      ],
+      [
+       "format the answer:",
+       4.86467968482357
+      ],
+      [
+       "round the result to two decimal places.",
+       4.453579993148338
+      ],
+      [
+       "from the table:",
+       4.008221993833504
+      ],
+      [
+       "value: N",
+       2.0669178942560236
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 11714,
+     "edited": 3265,
+     "tokens": 88282,
+     "share_of_reasoning": 0.025339,
+     "share_before_check": 0.025339,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 3680,
+     "format_words_pct": 92.2554347826087,
+     "top_lines": [
+      [
+       "round to two decimal places:",
+       7.810107197549771
+      ],
+      [
+       "round the result to two decimal places.",
+       4.012251148545176
+      ],
+      [
+       "unit: thousand",
+       2.5421133231240427
+      ],
+      [
+       "format the answer:",
+       2.2052067381316998
+      ],
+      [
+       "format the answer according to the instructions.",
+       1.3476263399693722
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 11714,
+     "edited": 11712,
+     "tokens": 2728446,
+     "share_of_reasoning": 0.783125,
+     "share_before_check": 0.7832,
+     "kept_by_check": 1,
+     "no_reasoning": 1717,
+     "deleted_lines": 104539,
+     "format_words_pct": 13.248644046719406,
+     "top_lines": [
+      [
+       "from the table:",
+       11.31318306010929
+      ],
+      [
+       "round to two decimal places:",
+       5.259562841530054
+      ],
+      [
+       "calculate the percentage change:",
+       4.841188524590164
+      ],
+      [
+       "$$\\text{percentage change} = \\left( \\frac{N - N}{N} \\right) \\times N$$",
+       4.567964480874317
+      ],
+      [
+       "format the answer:",
+       4.106898907103825
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 11714,
+     "edited": 6466,
+     "tokens": 270754,
+     "share_of_reasoning": 0.077712,
+     "share_before_check": 0.077712,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 13585,
+     "format_words_pct": 5.542878174457122,
+     "top_lines": [
+      [
+       "from the table:",
+       5.412929167955459
+      ],
+      [
+       "calculate the change:",
+       1.8558614290133004
+      ],
+      [
+       "the formula for percentage change is:",
+       1.732137333745747
+      ],
+      [
+       "calculate the percentage change:",
+       1.6238787503866379
+      ],
+      [
+       "extract the values:",
+       1.6238787503866379
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 11714,
+     "edited": 11657,
+     "tokens": 190787,
+     "share_of_reasoning": 0.05476
+    }
+   }
+  },
+  "gemma/drop": {
+   "questions": 10006,
+   "solved_by_sampling": 7914,
+   "unsolved": 2092,
+   "recovered_by_rationalization": 730,
+   "pools": {
+    "rejection": 7914,
+    "rationalization": 8644,
+    "normalized": 8644,
+    "sft": 10006
+   },
+   "answer_lines_normalized": 368,
+   "reasoning_tokens": 2739106,
+   "all_reasoning_lines": {
+    "lines": 114622,
+    "format_words_pct": 5.853152099945909
+   },
+   "edits": {
+    "ftrim": {
+     "teachers": 8644,
+     "edited": 5161,
+     "tokens": 163925,
+     "share_of_reasoning": 0.059846,
+     "share_before_check": 0.059846,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 6987,
+     "format_words_pct": 77.42951195076571,
+     "top_lines": [
+      [
+       "format the answer according to the instructions (a number in digits only).",
+       11.93567138151521
+      ],
+      [
+       "format the answer according to the instructions.",
+       10.056190660724665
+      ],
+      [
+       "format the answer as a number in digits only.",
+       5.095911645030033
+      ],
+      [
+       "format the final answer as a number in digits only.",
+       3.9914745204417748
+      ],
+      [
+       "format the final answer according to the instructions (a number in digits only).",
+       2.925789575663631
+      ]
+     ]
+    },
+    "ftrim_half_bit": {
+     "teachers": 8644,
+     "edited": 6178,
+     "tokens": 225749,
+     "share_of_reasoning": 0.082417,
+     "share_before_check": 0.082417,
+     "kept_by_check": 0,
+     "no_reasoning": 1,
+     "deleted_lines": 10157,
+     "format_words_pct": 55.41006202618883,
+     "top_lines": [
+      [
+       "format the answer according to the instructions (a number in digits only).",
+       9.970864357397216
+      ],
+      [
+       "format the answer according to the instructions.",
+       8.416963418582066
+      ],
+      [
+       "format the answer as a number in digits only.",
+       4.273227581741664
+      ],
+      [
+       "format the final answer as a number in digits only.",
+       3.3344124312075105
+      ],
+      [
+       "format the final answer according to the instructions (a number in digits only).",
+       2.4441566850113303
+      ]
+     ]
+    },
+    "ftrim_two_bits": {
+     "teachers": 8644,
+     "edited": 4241,
+     "tokens": 112827,
+     "share_of_reasoning": 0.041191,
+     "share_before_check": 0.041191,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 4953,
+     "format_words_pct": 95.37653947102766,
+     "top_lines": [
+      [
+       "format the answer according to the instructions (a number in digits only).",
+       14.524876208441405
+      ],
+      [
+       "format the answer according to the instructions.",
+       11.648196180146192
+      ],
+      [
+       "format the answer as a number in digits only.",
+       6.201367601980665
+      ],
+      [
+       "format the final answer as a number in digits only.",
+       4.833765621315727
+      ],
+      [
+       "format the final answer according to the instructions (a number in digits only).",
+       3.5604810186276823
+      ]
+     ]
+    },
+    "ftrim_zero": {
+     "teachers": 8644,
+     "edited": 8644,
+     "tokens": 2124705,
+     "share_of_reasoning": 0.775693,
+     "share_before_check": 0.775693,
+     "kept_by_check": 0,
+     "no_reasoning": 975,
+     "deleted_lines": 85637,
+     "format_words_pct": 7.660240316685544,
+     "top_lines": [
+      [
+       "format the answer according to the instructions (a number in digits only).",
+       7.1263304025913925
+      ],
+      [
+       "format the answer according to the instructions.",
+       6.015733456732994
+      ],
+      [
+       "difference = $N - N$",
+       5.876908838500694
+      ],
+      [
+       "final answer formulation.",
+       5.113373438223045
+      ],
+      [
+       "format the answer as a number in digits only.",
+       3.054141601110597
+      ]
+     ]
+    },
+    "random_deletion": {
+     "teachers": 8644,
+     "edited": 5133,
+     "tokens": 180652,
+     "share_of_reasoning": 0.065953,
+     "share_before_check": 0.065953,
+     "kept_by_check": 0,
+     "no_reasoning": 0,
+     "deleted_lines": 9815,
+     "format_words_pct": 1.3958227203260316,
+     "top_lines": [
+      [
+       "difference = $N - N$",
+       1.9676602376777712
+      ],
+      [
+       "difference = $N$",
+       1.1299435028248588
+      ],
+      [
+       "final answer formulation.",
+       0.8571985193843756
+      ],
+      [
+       "\\begin{itemize}",
+       0.7597895967270601
+      ],
+      [
+       "the result is N.",
+       0.6623806740697448
+      ]
+     ]
+    },
+    "stm": {
+     "teachers": 8644,
+     "edited": 8580,
+     "tokens": 144015,
+     "share_of_reasoning": 0.052577
+    }
+   }
+  }
+ },
+ "simple_formats": {
+  "qwen/math": {
+   "teachers": 6581,
+   "reasoning_tokens": 8495540,
+   "ftrim_share": 0.0021237025545168407,
+   "teachers_with_format_talk": 1146
+  },
+  "qwen/gsm8k_strict": {
+   "teachers": 6787,
+   "reasoning_tokens": 2361184,
+   "ftrim_share": 0.009694712483228753,
+   "teachers_with_format_talk": 1828
+  },
+  "qwen/medcalc": {
+   "teachers": 8334,
+   "reasoning_tokens": 6153341,
+   "ftrim_share": 0.010097603887059079,
+   "teachers_with_format_talk": 1536
+  },
+  "qwen/medqa": {
+   "teachers": 9963,
+   "reasoning_tokens": 6558888,
+   "ftrim_share": 6.434017473693712e-05,
+   "teachers_with_format_talk": 41
+  },
+  "gemma/medcalc": {
+   "teachers": 6550,
+   "reasoning_tokens": 4024426,
+   "ftrim_share": 0.030257482682002353,
+   "teachers_with_format_talk": 2855
+  }
+ }
+}
